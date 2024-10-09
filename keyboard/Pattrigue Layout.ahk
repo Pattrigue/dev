@@ -59,3 +59,24 @@ Space::Enter
 KeyWait, CapsLock
 SendEvent {Shift Up}{Ctrl Up}{Alt Up}
 Return
+
+; --------------------------------------------------------------
+; MacOS-like Functionality
+; --------------------------------------------------------------
+
+; Swap Left Alt and Left Ctrl
+LAlt::LCtrl
+LCtrl::LAlt
+
+; Remap Ctrl-Tab to Alt-Tab
+^Tab::
+Send {Alt down}{Tab}
+Keywait LAlt
+Send {Alt up}
+return
+
+; Remap Ctrl-Shift-Tab to Alt-Shift-Tab
+^+Tab::
+Send {Alt down}{Shift down}{Tab}
+Keywait LAlt
+;
