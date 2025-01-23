@@ -47,8 +47,6 @@ if has("ide")
 	let g:highlightedyank_highlight_color = "rgba(250, 240, 170, 128)"
 endif
 
-"set relativenumber number
-
 "=== Colemak Mod-DHM ===
  
 "Colemak mnei(hjkl) t(i) <C-n>(f) <C-e>(e)
