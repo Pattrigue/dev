@@ -13,6 +13,13 @@ inoremap <S-Tab> <C-D>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
+" Enable syntax highlighting + filetype detection
+syntax on
+filetype plugin indent on
+
+" Enable truecolor
+set termguicolors
+
 " Trim whitespace
 nnoremap <Leader>rws :%s:\s\+$::<CR>:let @/=''<cr>
 
