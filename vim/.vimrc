@@ -49,4 +49,8 @@ onoremap gk gj
 
 " Yank highlight settings
 let g:highlightedyank_highlight_duration = 200
-let g:highlightedyank_highlight_duration = 200
+let g:highlightedyank_highlight_color = "rgba(250, 240, 170, 128)"
+
+if has("ide")
+  Plug 'machakann/vim-highlightedyank'
+endif
