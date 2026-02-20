@@ -1,3 +1,4 @@
+se foldmethod=manual
 set clipboard=unnamed,unnamedplus
 nnoremap <Home> _
 set ignorecase
