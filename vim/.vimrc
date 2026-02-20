@@ -1,4 +1,3 @@
-se foldmethod=manual
 set clipboard=unnamed,unnamedplus
 nnoremap <Home> _
 set ignorecase
@@ -13,6 +12,11 @@ nnoremap <S-Tab> <<_
 inoremap <S-Tab> <C-D>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
+
+" Disable folding
+set nofoldenable
+set foldmethod=manual
+set foldlevel=99
 
 " Enable syntax highlighting + filetype detection
 syntax on
