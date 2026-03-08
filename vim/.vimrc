@@ -1,6 +1,8 @@
 set clipboard=unnamed,unnamedplus
-nnoremap <Home> _
 set ignorecase
+set number
+colorscheme habamax
+nnoremap <Home> _
 xnoremap p "_dP
 
 noremap ; :
