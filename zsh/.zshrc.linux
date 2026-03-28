@@ -1,0 +1,29 @@
+# Custom zshrc for my Linux machine
+alias vvu='~/.local/bin/upload-vv-build.sh'
+
+open() {
+  local target="${1:-.}"
+
+  if [[ -d "$target" ]]; then
+    command dolphin "$target" >/dev/null 2>&1 </dev/null &!
+  else
+    command xdg-open "$target" >/dev/null 2>&1 </dev/null &!
+  fi
+}
+
+receipt() {
+    local path="$1"
+
+    if [[ -z "$path" ]]; then
+        echo "Usage: receipt /path/to/receipt.jpg" >&2
+        return 2
+    fi
+
+    # Start docker if it's not already running
+    if ! systemctl is-active --quiet docker; then
+        sudo systemctl start docker
+    fi
+
+    "$HOME/git/receipt-parser/run.sh" "$path"
+}
+
