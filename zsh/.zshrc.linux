@@ -12,18 +12,12 @@ open() {
 }
 
 receipt() {
-    local path="$1"
+  local path="$1"
 
-    if [[ -z "$path" ]]; then
-        echo "Usage: receipt /path/to/receipt.jpg" >&2
-        return 2
-    fi
+  if [[ -z "$path" ]]; then
+    echo "Usage: receipt /path/to/receipt.jpg" >&2
+    return 2
+  fi
 
-    # Start docker if it's not already running
-    if ! systemctl is-active --quiet docker; then
-        sudo systemctl start docker
-    fi
-
-    "$HOME/git/receipt-parser/run.sh" "$path"
+  "$HOME/git/receipt-parser/run.sh" "$path"
 }
-
