@@ -1,5 +1,15 @@
 # Custom zshrc for my Linux machine
 alias vvu='~/.local/bin/upload-vv-build.sh'
+alias receipt='~/git/receipt-parser/run.sh'
+
+resolve-transcode() {
+  ffmpeg -i "$1" \
+    -c:v dnxhd \
+    -profile:v dnxhr_sq \
+    -pix_fmt yuv422p \
+    -c:a pcm_s16le \
+    "${1%.*}-resolve.mov"
+}
 
 open() {
   local target="${1:-.}"
@@ -9,15 +19,4 @@ open() {
   else
     command xdg-open "$target" >/dev/null 2>&1 </dev/null &!
   fi
-}
-
-receipt() {
-  local path="$1"
-
-  if [[ -z "$path" ]]; then
-    echo "Usage: receipt /path/to/receipt.jpg" >&2
-    return 2
-  fi
-
-  "$HOME/git/receipt-parser/run.sh" "$path"
 }
