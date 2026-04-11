@@ -2,13 +2,8 @@
 alias vvu='~/.local/bin/upload-vv-build.sh'
 alias receipt='~/git/receipt-parser/run.sh'
 
-resolve-transcode() {
-  ffmpeg -i "$1" \
-    -c:v dnxhd \
-    -profile:v dnxhr_sq \
-    -pix_fmt yuv422p \
-    -c:a pcm_s16le \
-    "${1%.*}-resolve.mov"
+resolve-mp4-to-mov() {
+  ~/git/dev/scripts/resolve-mp4-to-mov.sh "$@"
 }
 
 open() {
