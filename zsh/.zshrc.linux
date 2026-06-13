@@ -1,9 +1,35 @@
 # Custom zshrc for my Linux machine
+
 alias vvu='~/.local/bin/upload-vv-build.sh'
 alias receipt='~/git/receipt-parser/run.sh'
 
-resolve-mp4-to-mov() {
-  ~/git/dev/scripts/resolve-mp4-to-mov.sh "$@"
+# Rust installations
+export PATH="$HOME/.cargo/bin:$PATH"
+
+remux_resolve() {
+  emulate -L zsh
+  setopt null_glob extended_glob
+
+  local input dir stem tmp output
+
+  for input in ./**/*.mp4(N); do
+    dir="${input:h}"
+    stem="${input:t:r}"
+    tmp="$dir/$stem.tmp.mov"
+    output="$dir/$stem.mov"
+
+    if ffmpeg -hide_banner -loglevel error -y -i "$input" \
+      -c:v dnxhd -profile:v dnxhr_sq -pix_fmt yuv422p \
+      -c:a pcm_s16le \
+      "$tmp"; then
+      rm -f -- "$input"
+      mv -- "$tmp" "$output"
+      printf 'OK   %s -> %s\n' "$input" "$output"
+    else
+      rm -f -- "$tmp"
+      printf 'FAIL %s\n' "$input" >&2
+    fi
+  done
 }
 
 open() {
