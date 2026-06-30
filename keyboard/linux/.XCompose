@@ -6,5 +6,3 @@ include "%L"
 <Multi_key> <E> : "Æ" U00C6
 <Multi_key> <o> : "ø" U00F8
 <Multi_key> <O> : "Ø" U00D8
-<Multi_key> <Multi_key> <e> : "é" U00E9
-<Multi_key> <Multi_key> <E> : "É" U00C9
