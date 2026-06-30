@@ -1,8 +1,10 @@
 include "%L"
 
-<Multi_key> <a> : "å" U00E5
-<Multi_key> <A> : "Å" U00C5
-<Multi_key> <e> : "æ" U00E6
-<Multi_key> <E> : "Æ" U00C6
-<Multi_key> <o> : "ø" U00F8
-<Multi_key> <O> : "Ø" U00D8
+<Multi_key> <a> : "å"
+<Multi_key> <A> : "Å"
+<Multi_key> <e> : "æ"
+<Multi_key> <E> : "Æ"
+<Multi_key> <o> : "ø"
+<Multi_key> <O> : "Ø"
+<Multi_key> <f> : "é"
+<Multi_key> <F> : "É"
