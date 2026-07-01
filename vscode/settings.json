@@ -1,0 +1,96 @@
+{
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "vim.vimrc.path": "$HOME/.vimrc",
+  "vim.vimrc.enable": true,
+  "vim.highlightedyank.enable": true,
+  "vim.useSystemClipboard": true,
+  "editor.mouseWheelZoom": true,
+  "liveServer.settings.port": 3000,
+  "editor.fontLigatures": false,
+  "editor.cursorSurroundingLines": 10,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "javascript.inlayHints.variableTypes.enabled": true,
+  "javascript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "editor.accessibilitySupport": "off",
+  "editor.mouseWheelScrollSensitivity": 0.5,
+  "editor.smoothScrolling": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "files.trimTrailingWhitespace": true,
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "vsicons.dontShowNewVersionMessage": true,
+  "explorer.compactFolders": false,
+  "workbench.tree.indent": 20,
+  "workbench.sideBar.location": "left",
+  "cssVariables.lookupFiles": [
+    "**/*.css",
+    "**/*.scss",
+    "**/*.sass",
+    "**/*.less",
+    "node_modules/@mantine/core/styles.css"
+  ],
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.useAliasesForRenames": false,
+  "editor.tabSize": 2,
+  "window.zoomLevel": 2,
+  "notebook.formatOnSave.enabled": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "always",
+    "source.fixAll.biome": "always"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": false,
+    "scminput": false
+  },
+  "editor.fontFamily": "'Cascadia Code'",
+  "workbench.colorCustomizations": {},
+  "window.titleBarStyle": "custom",
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "[r]": {
+    "editor.defaultFormatter": "REditorSupport.r",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "editor.defaultColorDecorators": "always",
+  "editor.codeLens": true,
+  "redhat.telemetry.enabled": false,
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "importCost.typescriptExtensions": ["\\.tsx?$"],
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://biomejs.dev": true
+  },
+  "workbench.colorTheme": "Dark Modern"
+}
