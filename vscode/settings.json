@@ -64,6 +64,7 @@
   "editor.fontFamily": "'Cascadia Code'",
   "workbench.colorCustomizations": {},
   "window.titleBarStyle": "custom",
+  "github.copilot.nextEditSuggestions.enabled": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
   "[r]": {
